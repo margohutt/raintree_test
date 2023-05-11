@@ -2,9 +2,6 @@
 // Open the connection
 require_once 'mysql_connection.php';
 
-// Use the raintree database
-mysqli_select_db($connection, "raintree");
-
 // Retrieve full name from the database as uppercase letters
 $sql = "SELECT UPPER(first) AS firstname, UPPER(last) AS lastname FROM patient";
 

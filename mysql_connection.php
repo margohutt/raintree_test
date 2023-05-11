@@ -8,8 +8,11 @@ $user_name = "root";
 //Password. Wamp server's default password is empty
 $password = "";
 
+// Database name
+$dbname = "raintree";
+
 // Creating the connection by specifying the connection details
-$connection = mysqli_connect($server_name, $user_name, $password);
+$connection = mysqli_connect($server_name, $user_name, $password, $dbname);
 
 // Checking the  connection
 if (!$connection) {

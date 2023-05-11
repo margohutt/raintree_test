@@ -2,9 +2,6 @@
 // Open the connection
 require_once 'mysql_connection.php';
 
-// Use the raintree database
-mysqli_select_db($connection, "raintree");
-
 // Query to retrieve all patients' information and insurance data ordered by insurance earliest date and patient last name
 $query = "SELECT patient.pn, patient.last, patient.first, insurance.iname, DATE_FORMAT(insurance.from_date, '%m-%d-%y') as from_date, DATE_FORMAT(insurance.to_date, '%m-%d-%y') as to_date
 FROM patient
